@@ -23,7 +23,7 @@ func main() {
 
 	cfg := basicauth.Config{
 		Users: map[string]string{
-			"Nick":  "Sharks12",
+			"Nick":  "Sharks12!",
 			"admin": "123456",
 		},
 	}

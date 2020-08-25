@@ -9,17 +9,29 @@
 </head>
 
 <body>
-	<header>
-		<h1>{{.Title}}</h1>
-	</header>
-	<h2>This is justkhgkhg a test!</h2>
-	<ul>
-		{{range .loopy}}
-		<li>
-			<img src="{{.}}" alt="">
-		</li>
-		{{end}}
-	</ul>
+	<nav>
+		<ul class="navbar">
+			<h1>{{.Title}}</h1>
+			<li><a href="/">Home</a> </li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/">Contact</a> </li>
+			<li><a href="https://www.instagram.com/nicklandrevillestudios/">Instagram</a></li>
+			<li><a href="https://www.medium.com/@xnel417x">Blog</a></li>
+		</ul>
+	</nav>
+	<main>
+		<h2>Welcome to my moodboard</h2>
+
+		<section class="centeredPhoto">
+			<ul>
+				{{range .loopy}}
+				<li>
+					<img src="{{.}}" alt="">
+				</li>
+				{{end}}
+			</ul>
+		</section>
+	</main>
 </body>
 
 </html>

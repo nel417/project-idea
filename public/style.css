@@ -1,9 +1,47 @@
+/* START NAVBAR CODE */
+li {
+	list-style-type: none;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.navbar>li {
+	display: flex;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a:visited {
+	color: orange;
+}
+
+a:hover {
+	color: blue;
+}
+
+/* END NAVBAR CODE */
+
+
+/* BEGIN MAIN CODE */
 h1 {
 	color: green;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-	display: flex;
-	flex-direction: row;
+h2 {
+	text-align: center;
 }
+
+.centeredPhoto {
+	text-align: center;
+}
+
+/* END MAIN CODE */
