@@ -1,9 +1,23 @@
+/* FONTS */
+body {
+	font-family: 'Roboto',
+		sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 /* START NAVBAR CODE */
 li {
 	list-style-type: none;
 }
 
 .navbar {
+	margin-top: 0;
+	padding-bottom: 72px;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -16,7 +30,7 @@ li {
 a {
 	text-decoration: none;
 	color: #000000;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	/* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 
 a:visited {
@@ -32,16 +46,21 @@ a:hover {
 
 /* BEGIN MAIN CODE */
 h1 {
-	color: green;
-	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 48px;
+	padding-bottom: 24px;
+	text-align: center;
+	color: #000000;
+	font-size: 64px;
+	/* font-family: Arial, Helvetica, sans-serif; */
 }
 
-h2 {
-	text-align: center;
-}
 
 .centeredPhoto {
 	text-align: center;
+}
+
+img {
+	width: 40%;
 }
 
 /* END MAIN CODE */
