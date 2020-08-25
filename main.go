@@ -10,12 +10,14 @@ import (
 )
 
 func main() {
-	// moodboard images
-	x := make([]string, 3)
+	//moodboard images
+	x := make([]string, 4)
 	x[0] = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/540fe1b392f2f-03-tcx-guy-celebrating-retro-tennis-gear-0812-xl-lg-1529073447.jpg?crop=0.862xw:1.00xh;0.0374xw,0&resize=480:*"
-	x[1] = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/540fe1b392f2f-03-tcx-guy-celebrating-retro-tennis-gear-0812-xl-lg-1529073447.jpg?crop=0.862xw:1.00xh;0.0374xw,0&resize=480:*"
-	x[2] = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/540fe1b392f2f-03-tcx-guy-celebrating-retro-tennis-gear-0812-xl-lg-1529073447.jpg?crop=0.862xw:1.00xh;0.0374xw,0&resize=480:*"
+	x[1] = "https://i.pinimg.com/564x/e1/a3/58/e1a35879d8fc23371df151d3850bce7c.jpg"
+	x[2] = "https://upload.wikimedia.org/wikipedia/en/6/63/Right_Now%2C_Wrong_Then_%28poster%29.jpg"
+	x[3] = "https://asianwiki.com/images/d/da/Right_Now%2C_Wrong_Then-p1.jpg"
 	//end mooboard images
+
 	engine := html.New("./views/", ".html")
 
 	app := fiber.New(&fiber.Settings{
@@ -46,7 +48,7 @@ func main() {
 		// c.SendFile("./public/about.html")
 		// Render fn
 		if err := c.Render("about", fiber.Map{
-			"AboutTitle":  "About Nick Landreville Studios",
+			"Title":       "Nick Landreville Studios",
 			"MailingList": "Join Our Mailing List",
 		}); err != nil {
 			c.Next(err)
@@ -58,6 +60,7 @@ func main() {
 		// c.SendFile("./public/about.html")
 		// Render fn
 		if err := c.Render("contact", fiber.Map{
+			"Title":       "Nick Landreville Studios",
 			"ContactInfo": "n1ck@hey.com",
 			"Location":    "Springfield, MO",
 			"MailingList": "Join Our Mailing List",
@@ -71,7 +74,9 @@ func main() {
 		// Static fn
 		// c.SendFile("./public/about.html")
 		// Render fn
-		if err := c.Render("blog", fiber.Map{}); err != nil {
+		if err := c.Render("blog", fiber.Map{
+			"Title": "Nick Landreville Studios",
+		}); err != nil {
 			c.Next(err)
 		}
 	})
@@ -80,7 +85,9 @@ func main() {
 		// Static fn
 		// c.SendFile("./public/about.html")
 		// Render fn
-		if err := c.Render("posts/dummy", fiber.Map{}); err != nil {
+		if err := c.Render("posts/dummy", fiber.Map{
+			"Title": "Nick Landreville Studios",
+		}); err != nil {
 			c.Next(err)
 		}
 	})
