@@ -44,7 +44,20 @@ func main() {
 		// Static fn
 		// c.SendFile("./public/about.html")
 		// Render fn
-		if err := c.Render("about", fiber.Map{}); err != nil {
+		if err := c.Render("about", fiber.Map{
+			"AboutTitle": "About Nick Landreville Studios",
+		}); err != nil {
+			c.Next(err)
+		}
+	})
+
+	app.Get("/contact", func(c *fiber.Ctx) {
+		// Static fn
+		// c.SendFile("./public/about.html")
+		// Render fn
+		if err := c.Render("contact", fiber.Map{
+			"ContactInfo": "n1ck@hey.com",
+		}); err != nil {
 			c.Next(err)
 		}
 	})
