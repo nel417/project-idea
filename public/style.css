@@ -81,6 +81,8 @@ img {
 
 /* FOOTER STYLES */
 footer {
+	position: fixed;
+	bottom: 0;
 	font-size: 12px;
 	padding: 24px;
 	/* text-align: center; */
@@ -104,4 +106,28 @@ footer {
 
 .postsDirectory li {
 	padding-bottom: 34px;
+}
+
+/* ABOUT STYLES */
+.aboutContainer {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	min-width: 650px;
+	max-width: 850px;
+	text-align: left;
+}
+
+.aboutContainer p {
+	font-size: 24px;
+	font-family: 'Raleway',
+		sans-serif;
+}
+
+.aboutContainer h2 {
+	font-family: 'Playfair Display',
+		serif;
+	font-weight: 900;
 }

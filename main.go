@@ -56,6 +56,7 @@ func main() {
 		if err := c.Render("about", fiber.Map{
 			"Title":       "Nick Landreville Studios",
 			"MailingList": "Join Our Mailing List",
+			"Hello":       "Hello",
 		}); err != nil {
 			c.Next(err)
 		}
