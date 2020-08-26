@@ -96,3 +96,12 @@ footer {
 	font-family: 'Raleway',
 		sans-serif;
 }
+
+.postsDirectory {
+	font-size: 60px;
+	padding-left: 196px;
+}
+
+.postsDirectory li {
+	padding-bottom: 34px;
+}
