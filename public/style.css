@@ -138,3 +138,15 @@ footer {
 	padding-top: 64px;
 	font-size: 64px;
 }
+
+
+
+.newsLetter {
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	transform: translate(-50%, -50%); */
+	text-align: center;
+	z-index: -1;
+}
