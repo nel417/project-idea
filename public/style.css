@@ -1,7 +1,7 @@
 /* FONTS */
 .titleFont {
-	font-family: 'Playfair Display',
-		serif;
+	font-family: 'Asul',
+	sans-serif;
 	font-weight: 900;
 
 }
@@ -14,11 +14,6 @@
 }
 
 /* START NAVBAR CODE */
-li {
-	list-style-type: none;
-	font-family: 'Raleway',
-		sans-serif;
-}
 
 .navbar {
 	margin-top: 0;
@@ -87,50 +82,33 @@ footer {
 	padding: 24px;
 	/* text-align: center; */
 }
-
-.postHeader {
-	font-family: 'Playfair Display',
-		serif;
-	font-weight: 900;
-}
-
-.postBody {
-	font-family: 'Raleway',
-		sans-serif;
-}
-
-.postsDirectory {
-	font-size: 60px;
-	padding-left: 196px;
-}
-
-.postsDirectory li {
-	padding-bottom: 34px;
-}
-
 /* ABOUT STYLES */
 .aboutContainer {
-	position: fixed;
-	top: 50%;
+	/* position: absolute;
+	top: 30%;
 	left: 50%;
-	/* bring your own prefixes */
-	transform: translate(-50%, -50%);
-	min-width: 650px;
+	
+	transform: translate(-50%, -50%); */
+	min-width: 625px;
 	max-width: 850px;
 	text-align: left;
+	margin-bottom: 16px;
+	padding: 30px 70px;
+}
+
+
+.aboutText {
+	font-family: 'Inter',
+	sans-serif;
+	margin-bottom: 24px;
 }
 
 .aboutContainer p {
-	font-size: 24px;
-	font-family: 'Raleway',
-		sans-serif;
+	font-size: 20px;
+	
 }
 
-.aboutContainer h2 {
-	font-family: 'Playfair Display',
-		serif;
-	font-weight: 900;
-}
+
 
 .contactInfo {
 	text-align: left;
@@ -142,11 +120,58 @@ footer {
 
 
 .newsLetter {
-	/* position: absolute;
-	top: 50%;
-	left: 50%;
-	
-	transform: translate(-50%, -50%); */
 	text-align: center;
 	z-index: -1;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	font-family: 'Work Sans',
+	sans-serif;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 70px;
+	font-weight: 500;
+}
+
+.logo {
+	margin-right: auto;
+	font-size: 24px;
+}
+
+.nav-area {
+	list-style: none;
+}
+
+.nav-area li {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+.nav-area li a {
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+.nav-area li a:hover {
+	color: #ca840a;
+}
+
+.siteInfo {
+	color: #3C1362
+}
+
+.aboutContainer h2 {
+	font-family: 'Inter',
+	sans-serif;
+	margin-bottom: 8px;
 }

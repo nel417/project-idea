@@ -3,15 +3,43 @@
 <body>
 	<div class="aboutContainer">
 		<h2>{{.Hello}}</h2>
-		<p>Thank you for stopping by, I am a software engineer and cultural commentator that helps strategize
-			brands with gen-z and millenial retention and competitive analysis. I enjoy moodboarding, boutique fitness,
-			90s-mid 00s skateboarding
-			culture, mid century modern, tennis, and espresso drinks. For more moods, written content, and curated
-			product, please sign up for our newsletter.
+		<div class="aboutText">
+		<p>
+			My Name is Nick and im a Software Engineer from Springfield Missouri.
+			I'm product focused and love to be involved the entire lifecycle of the project. My areas of interest are Web Accessibility and User Research (quantitive and qualative).
+			I love open source, competitive programming (recently just got into it), mountain biking, tennis, espresso, and furniture.
+			Below are my most recent projects, talks, links, etc. If you enjoy the moodboard on my site, please sign up for my newsletter.
+			<span class="siteInfo">This site was made with Golang and Fiber for the back end for SSR and deployed to Heroku.</span>
 		</p>
-		
+		</div>
+		<h2>{{.OS}}</h2>
+		<div class="aboutText">
+		<p>
+			Node.js.org | Contributed code, Merged pull request into production<br>
+			osmLabs | Contributed code, Merged pull request into production<br>
+			are.na | Contributed code, Merged pull request into production<br>
+			rawCMS | Contributed code, Merged pull request into production<br>
+		</p>
+		</div>
+		<h2>{{.Talk}}</h2>
+		<div class="aboutText">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Ek7rbkipHs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<h2>{{.Reads}}</h2>
+		<div class="aboutText">
+			<p>
+			Multipliers<br>
+			The agile manifesto<br>
+			Lean UX<br>
+			Lean Startup<br>
+			</p>
+		</div>
+
+
+
 	</div>
 
 	{{template "footer" .}}
 </body>
+
 </html>

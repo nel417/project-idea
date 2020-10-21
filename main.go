@@ -58,6 +58,9 @@ func main() {
 			"Title":       "Nick Landreville Studios",
 			"MailingList": "Join Our Mailing List",
 			"Hello":       "Hello",
+			"OS":          "Open Source Contributions",
+			"Talk":        "Most Recent Talk On Open Source",
+			"Reads":       "Favorite Books",
 		}); err != nil {
 			c.Next(err)
 		}
@@ -103,5 +106,6 @@ func main() {
 
 	// Static assets ( .css, .js etc )
 	app.Static("/", "./public")
-	log.Fatal(app.Listen(3000))
+	Port := 3000
+	log.Fatal(app.Listen(Port))
 }
