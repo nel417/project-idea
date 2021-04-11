@@ -32,7 +32,7 @@ func main() {
 	})
 
 	//Rendered assets
-	app.Get("/", func(c *fiber.Ctx) error {
+	app.Get("/", func(c *fiber.Ctx) {
 		if err := c.Render("index", fiber.Map{
 			"Title": "Nick Landreville Studios",
 			"loopy": x,
