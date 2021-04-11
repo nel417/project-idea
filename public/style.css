@@ -175,3 +175,12 @@ header {
 	sans-serif;
 	margin-bottom: 8px;
 }
+
+.aboutText a {
+	color: black;
+	font-style: italic;
+}
+
+.aboutText a:hover {
+	color: blue;
+}

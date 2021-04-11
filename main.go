@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 	"log"
 
-	"github.com/gofiber/basicauth"
+	// "github.com/gofiber/basicauth"
 	"github.com/gofiber/fiber"
 	"github.com/gofiber/template/html"
 )
@@ -31,18 +31,8 @@ func main() {
 		Views: engine,
 	})
 
-	cfg := basicauth.Config{
-		Users: map[string]string{
-			"Nick":  "Sharks12!",
-			"admin": "123456",
-		},
-	}
-	app.Use(basicauth.New(cfg))
 	//Rendered assets
 	app.Get("/", func(c *fiber.Ctx) {
-		username := c.Locals("username").(string)
-		password := c.Locals("password").(string)
-		fmt.Println(username, password)
 		if err := c.Render("index", fiber.Map{
 			"Title": "Nick Landreville Studios",
 			"loopy": x,
@@ -61,6 +51,7 @@ func main() {
 			"OS":          "Open Source Contributions",
 			"Talk":        "Most Recent Talk On Open Source",
 			"Reads":       "Favorite Books",
+			"Software":    "Software / ML (click for demos)",
 		}); err != nil {
 			c.Next(err)
 		}
