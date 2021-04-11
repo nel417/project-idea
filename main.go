@@ -97,7 +97,7 @@ func main() {
 
 	// Static assets ( .css, .js etc )
 	app.Static("/", "./public")
-	Port := 3000
+	Port :=8080
 	log.Fatal(app.Listen(Port))
 
 	// Get the PORT from heroku env
