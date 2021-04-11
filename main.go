@@ -32,7 +32,7 @@ func main() {
 	})
 
 	//Rendered assets
-	app.Get("/", func(c *fiber.Ctx) {
+	app.Get("/", func(c *fiber.Ctx) error {
 		if err := c.Render("index", fiber.Map{
 			"Title": "Nick Landreville Studios",
 			"loopy": x,
@@ -99,4 +99,15 @@ func main() {
 	app.Static("/", "./public")
 	Port := 3000
 	log.Fatal(app.Listen(Port))
+
+	// Get the PORT from heroku env
+	port := os.Getenv("PORT")
+
+	// Verify if heroku provided the port or not
+	if os.Getenv("PORT") == "" {
+		port = "8080"
+	}
+
+	// Start server on http://${heroku-url}:${port}
+	log.Fatal(app.Listen(":" + port))
 }
